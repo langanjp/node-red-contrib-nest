@@ -64,7 +64,7 @@
                 csec = $("#node-config-input-clientsecret").val();
                 pin = $("#node-config-input-pin").val();
                 if (pin) { //add check for cid and csec too
-                    $.get('/nest-credentials/' + ncnId + '/' + cid + '/' + csec + '/' + pin + '/auth',function(data) {
+                    $.get('/red/nest-credentials/' + ncnId + '/' + cid + '/' + csec + '/' + pin + '/auth',function(data) {
                         //write access token value back out to the form
                         if (data != "Error" && data != "Unauthorised") {
                             $("#node-config-input-accesstoken").val(data); 
